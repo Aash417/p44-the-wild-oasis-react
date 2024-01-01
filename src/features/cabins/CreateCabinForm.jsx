@@ -117,7 +117,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
         />
       </FormRow>
 
-      <FormRow label="Cabin photo" error={errors?.imgae?.message}>
+      <FormRow label="Cabin photo" error={errors?.image?.message}>
         <FileInput
           id="image"
           disabled={isWorking}
