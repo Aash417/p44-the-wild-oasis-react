@@ -78,7 +78,7 @@ function CabinRow({ cabin }) {
       <TableRow role="row">
         <Img src={image} />
         <Cabin>{name}</Cabin>
-        <div>{maxCapacity}</div>
+        <div>{`${maxCapacity} guests`}</div>
         <Price>{formatCurrency(regularPrice)}</Price>
         {discount ? (
           <Discount>{formatCurrency(discount)}</Discount>
