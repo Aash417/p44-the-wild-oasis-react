@@ -13,6 +13,7 @@ import PageNotFound from './pages/PageNotFound';
 import GlobalStyle from './styles/GlobalStyles';
 import AppLayout from './ui/AppLayout';
 import Booking from './features/bookings/Booking';
+import CheckIn from './pages/CheckIn';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,6 +36,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="bookings" element={<Bookings />} />
             <Route path="bookings/:bookingId" element={<Booking />} />
+            <Route path="checkin/:bookingId" element={<CheckIn />} />
             <Route path="cabins" element={<Cabins />} />
             <Route path="users" element={<NewUsers />} />
             <Route path="settings" element={<Settings />} />
