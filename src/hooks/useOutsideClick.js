@@ -7,7 +7,7 @@ export function useOutsideClick(handler) {
     function () {
       function handleClick(e) {
         if (ref.current && !ref.current.contains(e.target)) {
-          console.log('out');
+          // console.log('out');
           handler();
         }
       }

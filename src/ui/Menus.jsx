@@ -82,7 +82,7 @@ function Menus({ children }) {
     </MenusContext.Provider>
   );
 }
-// chlidren
+// children
 function Toggle({ id }) {
   const { openId, close, open, setPosition } = useContext(MenusContext);
 
@@ -92,7 +92,7 @@ function Toggle({ id }) {
       x: window.innerWidth - rect.width - rect.x,
       y: rect.y + rect.height + 8,
     });
-    console.log(id);
+    // console.log(id);
     openId === '' || openId !== id ? open(id) : close();
   }
 
