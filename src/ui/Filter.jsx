@@ -36,12 +36,15 @@ const FilterButton = styled.button`
 `;
 
 function Filter({ filterField, options }) {
-  const [searchParams, setSerchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const currentFilter = searchParams.get(filterField) || options.at(0).value;
 
   function handleClick(value) {
+    // fixed a bug of by resetting page to 1 on every page change
+    if (searchParams.get('page')) searchParams.set('page', 1);
+
     searchParams.set(filterField, value);
-    setSerchParams(searchParams);
+    setSearchParams(searchParams);
   }
 
   return (
