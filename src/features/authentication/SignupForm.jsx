@@ -29,6 +29,7 @@ function SignupForm() {
           id="fullName"
           disabled={isLoading}
           {...register('fullName', { required: 'This field is required' })}
+          autoComplete="on"
         />
       </FormRow>
 
@@ -44,6 +45,7 @@ function SignupForm() {
               message: 'Provide a valid email address',
             },
           })}
+          autoComplete="on"
         />
       </FormRow>
 
@@ -62,6 +64,7 @@ function SignupForm() {
               message: 'Password needs a minimum 8 character',
             },
           })}
+          autoComplete="on"
         />
       </FormRow>
 
@@ -75,13 +78,14 @@ function SignupForm() {
             validate: (value) =>
               value === getValues().password || 'Password need to match',
           })}
+          autoComplete="on"
         />
       </FormRow>
 
       <FormRow>
         {/* type is an HTML attribute! */}
         <Button
-          variation="secondary"
+          $variation="secondary"
           type="reset"
           disabled={isLoading}
           onClick={reset}

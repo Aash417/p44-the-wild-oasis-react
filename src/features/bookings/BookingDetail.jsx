@@ -17,6 +17,7 @@ import useCheckout from '../check-in-out/useCheckout';
 import { useDeleteBooking } from './useDeleteBooking';
 import Modal from '../../ui/Modal';
 import ConfirmDelete from '../../ui/ConfirmDelete';
+import Empty from '../../ui/Empty';
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -34,6 +35,7 @@ function BookingDetail() {
   const isWorking = isLoading || isCheckingOut || isDeleting;
 
   if (isLoading) return <Spinner />;
+  if (!booking) return <Empty resourceName="booking" />;
 
   const { status, id: bookingId } = booking;
 
@@ -79,7 +81,7 @@ function BookingDetail() {
           <Modal>
             <Modal.Open opens="delete">
               <Button
-                variation="danger"
+                $variation="danger"
                 onClick={() => deleteBooking(bookingId)}
                 disabled={isWorking}
               >
@@ -99,7 +101,7 @@ function BookingDetail() {
           </Modal>
         )}
 
-        <Button variation="secondary" onClick={moveBack}>
+        <Button $variation="secondary" onClick={moveBack}>
           Back
         </Button>
       </ButtonGroup>

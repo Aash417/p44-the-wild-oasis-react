@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Logo from './Logo';
 import MainNav from './MainNav';
-import Uploader from '../data/Uploader';
+// import Uploader from '../data/Uploader';
 import { memo } from 'react';
 
 const StyledSidebar = styled.aside`
@@ -19,7 +19,8 @@ const Sidebar = memo(function Sidebar() {
     <StyledSidebar>
       <Logo />
       <MainNav />
-      <Uploader />
+      {/* for development purpose only */}
+      {/* <Uploader /> */}
     </StyledSidebar>
   );
 }); 
