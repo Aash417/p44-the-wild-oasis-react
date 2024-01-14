@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { useState } from 'react';
 import { HiPencil, HiTrash } from 'react-icons/hi';
 
 import { formatCurrency } from '../../utils/helpers';
