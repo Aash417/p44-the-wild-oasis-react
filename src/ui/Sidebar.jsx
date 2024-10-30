@@ -15,14 +15,14 @@ const StyledSidebar = styled.aside`
 `;
 
 const Sidebar = memo(function Sidebar() {
-  return (
-    <StyledSidebar>
-      <Logo />
-      <MainNav />
-      {/* for development purpose only */}
-      {/* <Uploader /> */}
-    </StyledSidebar>
-  );
-}); 
+   return (
+      <StyledSidebar>
+         <Logo />
+         <MainNav />
+         {/* for development purpose only */}
+         {/* <Uploader /> */}
+      </StyledSidebar>
+   );
+});
 
 export default Sidebar;
